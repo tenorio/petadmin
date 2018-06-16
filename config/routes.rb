@@ -3,6 +3,13 @@ require 'sidekiq/web'
 Rails.application.routes.draw do
 
   namespace :admin do
+    resources :campaigns
+    resources :clients
+    resources :discounts
+    resources :products
+    resources :sells
+    resources :services
+    resources :suppliers
   end
   # mount Fae below your admin namespec
   mount Fae::Engine => '/admin'
